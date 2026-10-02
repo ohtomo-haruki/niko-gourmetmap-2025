@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="format-detection" content="telephone=no">
+<title>二高グルメマップ 2025年度版</title>
+<meta name="description" content="故郷の宮城・仙台の「風」を感じられる飲食店と、東京で活躍する同窓生が手がけるお店をまとめた「二高グルメマップ」2025年度版です。">
+<style>
+:root{
+  --blue:#0e5bbd; --blue-d:#0a3f86; --ink:#1d2733; --sub:#5b6673;
+  --paper:#f6f3ec; --card:#ffffff; --line:#e4dfd3; --red:#c63a2f;
+  --tint:#eef4fc; --tint-line:#d7e3f3; --warm:#fbf5e6;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","Noto Serif CJK JP",serif;
+  --gothic:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP","Noto Sans CJK JP",Meiryo,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+img{max-width:100%;height:auto}
+a{color:var(--blue-d)}
+a:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+main{max-width:640px;margin:0 auto;padding:0 16px 104px}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0;padding:0}
+
+/* 表紙 */
+.cover{background:var(--blue);color:#fff;text-align:center;padding:36px 20px 0}
+.cover .crest{width:84px;height:auto}
+.cover h1{font-family:var(--mincho);font-weight:700;line-height:1.25;margin-top:14px}
+.cover h1 span{display:block}
+.cover h1 .k{font-size:58px;letter-spacing:.08em}
+.cover h1 .t{font-size:27px;letter-spacing:.32em;margin-right:-.32em}
+.cover h1 .y{font-size:17px;letter-spacing:.12em;margin-top:10px;font-family:var(--gothic);font-weight:600;opacity:.92}
+.cover .coverimg{display:block;width:min(100%,400px);margin:26px auto 0;border-radius:14px 14px 0 0}
+
+/* 序・目次 */
+.preface,.toc{margin-top:32px}
+.preface h2,.toc h2,.others h2{font-family:var(--mincho);color:var(--blue);font-size:26px;line-height:1.4;margin-bottom:10px}
+.others h2{font-size:21px}
+.preface p{margin-bottom:1.1em}
+.sign{text-align:right;color:var(--sub);font-size:14px;line-height:1.7}
+.toc ol{list-style:none;background:var(--card);border-radius:16px;padding:4px 16px;box-shadow:0 1px 3px rgba(29,39,51,.08)}
+.toc li+li{border-top:1px solid var(--line)}
+.toc a{display:flex;align-items:center;gap:14px;min-height:52px;padding:8px 0;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.45}
+.toc a span{flex:none;width:2em;font-family:var(--mincho);color:var(--red);font-size:17px;text-align:center}
+.toc a::after{content:"";flex:none;margin-left:auto;width:8px;height:8px;border-right:2px solid #a9b1bb;border-bottom:2px solid #a9b1bb;transform:rotate(-45deg)}
+
+/* お店の記事 */
+.shop{background:var(--card);border-radius:16px;padding:24px 18px 22px;margin-top:28px;box-shadow:0 1px 3px rgba(29,39,51,.08);scroll-margin-top:12px}
+.shop>header .num{font-family:var(--mincho);color:var(--red);font-size:20px;line-height:1;letter-spacing:.06em}
+.shop>header h2{font-family:var(--mincho);font-size:23px;line-height:1.4;margin-top:6px;text-wrap:balance}
+.lead{margin-top:14px;background:var(--tint);border:1px solid var(--tint-line);border-radius:12px;padding:12px 14px;font-weight:700;line-height:1.7}
+.gallery{display:flex;gap:10px;overflow-x:auto;margin:16px -18px 0;padding:0 18px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.gallery figure{flex:none;display:table;scroll-snap-align:center}
+.gallery img{display:block;height:190px;width:auto;max-width:none;border-radius:10px;background:#f1eee7}
+.gallery figcaption,.portrait figcaption{display:table-caption;caption-side:bottom;font-size:12.5px;line-height:1.5;color:var(--sub);padding-top:5px;text-align:center}
+.info{margin-top:16px;background:var(--tint);border:1px solid var(--tint-line);border-radius:12px;padding:12px 14px 14px;font-size:15px;line-height:1.65}
+.info dl>div{display:grid;grid-template-columns:4.6em 1fr;gap:8px;padding:5px 0}
+.info dt{color:var(--sub);font-size:13px;padding-top:1px}
+.info-note{font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font-weight:700;font-size:14px;text-decoration:none}
+.btn.primary{background:var(--blue);color:#fff}
+.branch+.branch{border-top:1px solid var(--tint-line);margin-top:14px;padding-top:12px}
+.branch h3{font-size:15.5px}
+.map{margin-top:12px}
+.map img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+h3.person{font-family:var(--mincho);font-size:18px;line-height:1.5;border-left:4px solid var(--blue);padding-left:10px;margin-top:22px}
+.body{margin-top:14px}
+.body p+p{margin-top:1em}
+.comment,.roster{margin-top:18px;background:var(--warm);border-radius:12px;padding:14px}
+.portrait{display:table;margin:18px auto 0}
+.comment .portrait{margin:0 auto 12px}
+.portrait img{display:block;max-height:230px;width:auto;max-width:100%;border-radius:10px}
+.from{font-weight:700;color:var(--blue-d);font-size:14px;margin-bottom:2px}
+.from::after{content:""}
+.roster ul{list-style:none}
+.sns{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+.sns li{display:flex;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
+.sns li span{flex:none;width:6em;color:var(--sub);font-size:13px}
+.shopbox{text-align:center}
+.shopbox .shopname{font-family:var(--mincho);font-weight:700;font-size:18px}
+.shopbox .offer{margin-top:4px}
+.shopbox .actions{justify-content:center}
+.shopbox .shopurl{font-size:12.5px;color:var(--sub);margin-top:6px}
+.logo{text-align:center;margin-top:22px}
+.logo img{max-height:64px;max-width:90%;width:auto;height:auto}
+
+/* 他のお店・結び */
+.others{margin-top:40px;scroll-margin-top:12px}
+.others ul{list-style:none}
+.others li{background:var(--card);border-radius:14px;padding:16px 16px 14px;margin-top:12px;box-shadow:0 1px 3px rgba(29,39,51,.08);font-size:15px;line-height:1.7}
+.others h3{font-family:var(--mincho);font-size:18px;line-height:1.45}
+.others .by{color:var(--sub);font-size:13px;margin:2px 0 6px}
+.others dl{margin-top:8px;border-top:1px solid var(--line);padding-top:6px}
+.others dl>div{display:grid;grid-template-columns:4.6em 1fr;gap:8px;padding:3px 0}
+.others dt{color:var(--sub);font-size:13px}
+.closing{margin-top:40px;text-align:center;font-size:15px;text-wrap:balance}
+.closing .sign{text-align:center;margin-top:12px}
+.totoc{position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom));height:44px;line-height:44px;padding:0 20px;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 4px 12px rgba(10,63,134,.35)}
+@media (min-width:560px){.gallery img{height:230px}}
+
+</style>
+</head>
+<body>
+<header class="cover" id="top">
+  <img src="images/cover_02.png" width="256" height="235" alt="仙台二高 校章" class="crest">
+  <h1><span class="k">二高</span><span class="t">グルメマップ</span><span class="y">2025年度版</span></h1>
+  <img src="images/cover_01.jpg" width="717" height="922" alt="表紙：料理の並んだ食卓" class="coverimg">
+</header>
+<main>
+<section class="preface" id="preface">
+  <h2>序</h2>
+  <p>この「二高グルメマップ」は、2018年の創刊以来、故郷の宮城・仙台の「風」を感じられる飲食店と、東京で活躍する同窓生が手がけるお店をまとめたものです。</p><p>ふるさと遠き東京にあっても、このマップに掲載されているお店に足を運んでいただくことで、故郷を身近に感じていただければ幸いです。</p><p>今年度の総会テーマは「受け継ぐ伝統、広がる未来」です。このテーマを胸に、このグルメマップが、わが母校の伝統を再確認しつつ、同窓生間の交流をさらに広げ、豊かな未来を創造する「絆」を深めるきっかけとなることを願っています。</p>
+  <p class="sign">二高グルメマップ制作担当<br>高70回大友悠希</p>
+</section>
+<nav class="toc" id="toc" aria-label="目次">
+  <h2>目次</h2>
+  <ol><li><a href="#ichinotani"><span>01</span>くじらのお宿 一乃谷</a></li><li><a href="#oriental-deli"><span>02</span>オリエンタルデリ</a></li><li><a href="#furusato-plaza"><span>03</span>宮城ふるさとプラザ</a></li><li><a href="#curryko"><span>04</span>印度カリー子のスパイスショップ</a></li><li><a href="#watasu"><span>05</span>わたす日本橋</a></li><li><a href="#hyakujo"><span>06</span>手打そば 百丈</a></li><li><a href="#ippo"><span>07</span>魚BAR一歩 / 中華厨房一歩</a></li><li><a href="#kintaro"><span>08</span>お好み鉄板焼 金太郎</a></li><li><a href="#bunji"><span>09</span>三代目 文治</a></li><li><a href="#taruichi"><span>10</span>樽一 新宿本店</a></li><li><a href="#miyoshiya"><span>11</span>旬の魚と宮城の地酒 三好屋</a></li><li><a href="#sapporo-lion"><span>12</span>サッポロライオン</a></li><li><a href="#taikochaya"><span>13</span>おさかな本舗 たいこ茶屋</a></li><li><a href="#yukun"><span>14</span>新橋 有薫酒蔵</a></li><li><a href="#others"><span>＋</span>他にも、素敵なお店</a></li></ol>
+</nav>
+<article class="shop" id="ichinotani">
+<header><p class="num">01</p><h2>くじらのお宿 一乃谷</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p02_01.jpg" width="1143" height="857" alt="揚げ物" loading="lazy" decoding="async"></figure><figure><img src="images/p02_02.jpg" width="660" height="496" alt="鯨のステーキ" loading="lazy" decoding="async"></figure><figure><img src="images/p02_03.jpg" width="807" height="605" alt="刺身（赤身）" loading="lazy" decoding="async"></figure><figure><img src="images/p02_04.jpg" width="1143" height="857" alt="刺身の盛り合わせ" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都千代田区内神田2丁目7-6ゆまにビルB1F</dd></div><div><dt>アクセス</dt><dd>J R中央線・地下鉄銀座線 神田駅</dd></div><div><dt>電話</dt><dd><a href="tel:0332546096">03-3254-6096</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://kujira-ichinotani.com/" target="_blank" rel="noopener">https://kujira-ichinotani.com/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%8F%E3%81%98%E3%82%89%E3%81%AE%E3%81%8A%E5%AE%BF%20%E4%B8%80%E4%B9%83%E8%B0%B7%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%86%85%E7%A5%9E%E7%94%B02%E4%B8%81%E7%9B%AE7-6%E3%82%86%E3%81%BE%E3%81%AB%E3%83%93%E3%83%ABB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0332546096">電話をかける</a><a class="btn" href="https://kujira-ichinotani.com/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>「一乃谷」さんは、東京にありながら宮城県の豊かな海の恵みを感じられるお店です。</p><p>特に、現在希少になってしまったくじら料理が自慢で、古くからの日本の食文化を大切にしつつ、新しい世代にもその魅力を伝えています。</p><p>店主の谷さんは、今年6月に上映開始となった、日本の鯨食文化の魅力を伝えながら世界の食糧資源や生態系を考えるドキュメンタリー映画『鯨のレストラン』（八木景子監督）に出演されています。</p><p>宮城の味を思い出させる逸品と、宮城の地酒で、宮城の風土を感じられるひとときを提供されています。</p><p>取材日：2024年9月3日</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p02_05.jpg" width="431" height="605" alt="人物写真" loading="lazy" decoding="async"></figure><div><p class="from">谷さんより</p><p>おすすめは、鯨のステーキです。皆さんのお越しをお待ちしております。</p></div></aside>
+<p class="logo"><img src="images/p02_06.png" width="600" height="90" alt="くじらのお宿 一乃谷 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="oriental-deli">
+<header><p class="num">02</p><h2>オリエンタルデリ</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p03_01.jpg" width="643" height="857" alt="タイのビール" loading="lazy" decoding="async"></figure><figure><img src="images/p03_02.jpg" width="444" height="333" alt="前菜の盛り合わせ" loading="lazy" decoding="async"></figure><figure><img src="images/p03_03.jpg" width="444" height="333" alt="トムセープ" loading="lazy" decoding="async"><figcaption>トムセープ</figcaption></figure><figure><img src="images/p03_04.jpg" width="444" height="333" alt="ガパオライス" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都目黒区駒場2-17-8</dd></div><div><dt>アクセス</dt><dd>京王井の頭線 駒場東大前駅 徒歩6分</dd></div><div><dt>電話</dt><dd><a href="tel:0334652267">03-3465-2267</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://oriental-deli-nakano.tokyo/" target="_blank" rel="noopener">https://oriental-deli-nakano.tokyo/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%87%E3%83%AA%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E9%A7%92%E5%A0%B42-17-8" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0334652267">電話をかける</a><a class="btn" href="https://oriental-deli-nakano.tokyo/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>オーナーの太齋さんは、白石高校のご出身。</p><p>以前はアパレル業をされていたとのことですが、2006年に飲食業界へ転向されました。</p><p>現在は、霞ヶ関、品川、新宿などのオフィスビル等で、タイ料理のお弁当の販売を中心に行なっておられます。</p><p>取材では、店内飲食ができる、駒場のお店にうかがい、お食事をさせていただきました。</p><p>人気の料理はガパオ、カオマンガイ、パッタイなどとのことでした</p><p>太齋さんからは、変わり種としてトムセープ（上から3枚目の写真のスープ）をお薦めいただきました。</p><p>取材日：2024年9月30日</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p03_05.jpg" width="333" height="444" alt="人物写真" loading="lazy" decoding="async"></figure><div><p class="from">太齊さんより</p><p>オフィスビル以外でも、新宿のNEWoManでお弁当をお買い求めいただいたり、駒場など、いくつかの実店舗でお食事いただけます。皆様のご来店をお待ちしております。</p></div></aside>
+<p class="logo"><img src="images/p03_06.png" width="287" height="93" alt="オリエンタルデリ ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="furusato-plaza">
+<header><p class="num">03</p><h2>宮城ふるさとプラザ</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p04_01.jpg" width="625" height="625" alt="店舗イメージ（2025.8.8 グランドオープン）" loading="lazy" decoding="async"></figure><figure><img src="images/p04_02.jpg" width="399" height="277" alt="牛たんの詰め合わせ" loading="lazy" decoding="async"></figure><figure><img src="images/p04_03.jpg" width="225" height="225" alt="お菓子" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>〒100-0006<br>東京都千代田区有楽町2-10-1<br>東京交通会館地下1階</dd></div><div><dt>Web</dt><dd><a class="url" href="https://cocomiyagi.jp/" target="_blank" rel="noopener">https://cocomiyagi.jp/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%AE%E5%9F%8E%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E3%83%97%E3%83%A9%E3%82%B6%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E6%9C%89%E6%A5%BD%E7%94%BA2-10-1%20%E6%9D%B1%E4%BA%AC%E4%BA%A4%E9%80%9A%E4%BC%9A%E9%A4%A8%E5%9C%B0%E4%B8%8B1%E9%9A%8E" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="https://cocomiyagi.jp/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>「宮城ふるさとプラザ」は2025年8月8日より、有楽町交通会館の地下1階に移転、オープンいたしました。</p><p>牛たんや海産物、地酒、スイーツなど、宮城の豊かな特産品を取り揃えているほか、観光情報の発信も行っています。みやぎの魅力を東京で体験できる拠点です。</p></div>
+<p class="logo"><img src="images/p04_04.svg" width="966" height="211" alt="宮城ふるさとプラザ ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="curryko">
+<header><p class="num">04</p><h2>印度カリー子のスパイスショップ</h2></header>
+<p class="lead">今流行りのスパイスカレー<br>おうちで簡単に作ってみませんか？</p>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p05_01.png" width="184" height="116" alt="カレー" loading="lazy" decoding="async"></figure><figure><img src="images/p05_02.png" width="216" height="200" alt="カレー" loading="lazy" decoding="async"></figure><figure><img src="images/p05_03.png" width="228" height="159" alt="キーマカレー" loading="lazy" decoding="async"></figure></div>
+<h3 class="person">高67 印度カリー子/齋藤柚里</h3>
+<figure class="portrait"><img src="images/p05_04.jpg" width="240" height="303" alt="高67 印度カリー子さん" loading="lazy" decoding="async"><figcaption>高67 印度カリー子さん</figcaption></figure>
+<div class="body"><p>スパイス料理研究家兼タレント。<br>スパイス初心者のための専門店 香林館（株）代表取締役。JAPAN MENSA会員。</p><p>「スパイスカレーをおうちでもっと手軽に」をモットーに、初心者のためのスパイス製品の開発・販売を手がける。</p><p>近著「ひとりぶんのビリヤニ」など著書累計発行部数は44万部超(2025年8月現在)、全20作</p><p>2021年Forbes JAPANが主催する「世界を変える30歳未満の30人 」に選出。同時受賞は、大谷翔平、松山英樹など</p><p>ヒルナンデス、あさイチ、マツコ会議他TV出演多数</p></div>
+<ul class="sns"><li><span>X</span><a href="https://x.com/IndoCurryKo" target="_blank" rel="noopener">@IndoCurryKo</a></li><li><span>Instagram</span><a href="https://www.instagram.com/indocurryko/" target="_blank" rel="noopener">@indocurryko</a></li><li><span>Facebook</span><a href="https://www.facebook.com/IndoCurryKo" target="_blank" rel="noopener">@IndoCurryKo</a></li><li><span>YouTube</span>印度カリー子</li></ul>
+<div class="info shopbox"><p class="shopname">印度カリー子のスパイスショップ</p><p class="offer">スパイスカレー初心者おすすめ<br>人気商品 7点セット<br>【送料無料】<br>3,150円</p><div class="actions"><a class="btn primary" href="https://x.gd/clB9x" target="_blank" rel="noopener">ショップを見る</a></div><p class="shopurl">https://x.gd/clB9x</p></div>
+</article>
+<article class="shop" id="watasu">
+<header><p class="num">05</p><h2>わたす日本橋</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p06_01.jpg" width="264" height="191" alt="店内の東北情報の展示" loading="lazy" decoding="async"></figure><figure><img src="images/p06_02.jpg" width="264" height="170" alt="店内の物販コーナー" loading="lazy" decoding="async"></figure><figure><img src="images/p06_03.jpg" width="257" height="193" alt="東北の地酒" loading="lazy" decoding="async"></figure><figure><img src="images/p06_04.jpg" width="202" height="214" alt="店舗入口" loading="lazy" decoding="async"></figure><figure><img src="images/p06_05.jpg" width="249" height="175" alt="料理" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都中央区日本橋室町2-1-1 日本橋三井タワー2F</dd></div><div><dt>アクセス</dt><dd>地下鉄銀座線 三越前駅</dd></div><div><dt>電話</dt><dd><a href="tel:0335103185">03-3510-3185</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://www.watasu.net/" target="_blank" rel="noopener">https://www.watasu.net/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%8F%E3%81%9F%E3%81%99%E6%97%A5%E6%9C%AC%E6%A9%8B%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B%E5%AE%A4%E7%94%BA2-1-1%20%E6%97%A5%E6%9C%AC%E6%A9%8B%E4%B8%89%E4%BA%95%E3%82%BF%E3%83%AF%E3%83%BC2F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0335103185">電話をかける</a><a class="btn" href="https://www.watasu.net/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<h3 class="person">高32 中村好二</h3>
+<div class="body"><p>高32回の中村好二さんが運営に携わっていらっしゃるお店です。</p><p>震災後のボランティア活動をきっかけに、2015年に開設した東北の情報発信・交流拠点です。</p><p>南三陸杉をふんだんに使った店内で、東北の食材を利用したお食事の提供や東北の情報の展示や交流などの取組を行っています。</p><p>スタッフが産地に通い出会った海・里の食材を使った「わたす日本橋」ならではの味をお楽しみください。</p><p>東北各地の地酒はもちろん、料理に合わせたワインや、話題の東北産ワインもご用意しております。</p></div>
+<aside class="comment"><div><p class="from">中村さんより</p><p>駅直結で集まりやすい場所ですので、同窓会などで是非ご利用ください。</p></div></aside>
+<p class="logo"><img src="images/p06_06.jpg" width="203" height="167" alt="わたす日本橋 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="hyakujo">
+<header><p class="num">06</p><h2>手打そば 百丈</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p07_01.jpg" width="225" height="189" alt="せいろそば" loading="lazy" decoding="async"></figure><figure><img src="images/p07_02.jpg" width="246" height="192" alt="冷やしそば" loading="lazy" decoding="async"></figure><figure><img src="images/p07_03.jpg" width="283" height="192" alt="店内" loading="lazy" decoding="async"></figure><figure><img src="images/p07_04.jpg" width="189" height="270" alt="洋館風の外観" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>埼玉県川越市元町1-1-15</dd></div><div><dt>アクセス</dt><dd>東武東上線 本川越駅</dd></div><div><dt>電話</dt><dd><a href="tel:0492262616">049-226-2616</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://tabelog.com/saitama/A1103/A110303/11003304/" target="_blank" rel="noopener">https://tabelog.com/saitama/A1103/A110303/11003304/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%89%8B%E6%89%93%E3%81%9D%E3%81%B0%20%E7%99%BE%E4%B8%88%20%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%85%83%E7%94%BA1-1-15" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0492262616">電話をかける</a><a class="btn" href="https://tabelog.com/saitama/A1103/A110303/11003304/" target="_blank" rel="noopener">食べログ</a></div></div>
+<figure class="map"><img src="images/p07_05.gif" width="500" height="309" alt="アクセスマップ" loading="lazy" decoding="async"></figure>
+<h3 class="person">高11 鈴木壮夫</h3>
+<div class="body"><p>高11回の鈴木壮夫さんが、総合商社を退職後、会津での住み込み修行を経て、奥様の実家の川越で立ち上げたお店が手打ちそば「百丈」です。</p><p>川越市役所交差点にあるレトロな洋館のような建物で、木のぬくもりが詰まった素敵な店構えです。</p><p>小江戸川越に店を構えて20余年、今は娘さん夫婦が後を継いでいます。<br>目で楽しみ、喉で味わうこの蕎麦は、訪れるお客様を魅了してくれます。</p><p>口コミで話題を呼び、これまでたくさんのTVや新聞などのメディアに取り上げられてきました。</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p07_06.jpg" width="378" height="284" alt="中央が高11鈴木壮夫さん" loading="lazy" decoding="async"><figcaption>中央が高11鈴木壮夫さん</figcaption></figure><div><p class="from">鈴木さんより</p><p>ぜひ一度、情緒あふれる街並みで、美味しいお蕎麦をいかがですか。</p></div></aside>
+<p class="logo"><img src="images/p07_07.jpg" width="326" height="81" alt="手打そば 百丈 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="ippo">
+<header><p class="num">07</p><h2>魚BAR一歩 / 中華厨房一歩</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p08_01.jpg" width="444" height="333" alt="店舗の外観" loading="lazy" decoding="async"></figure><figure><img src="images/p08_02.jpg" width="331" height="425" alt="鍋料理" loading="lazy" decoding="async"></figure><figure><img src="images/p08_03.jpg" width="414" height="296" alt="はらこ飯" loading="lazy" decoding="async"></figure></div>
+<div class="info branches"><div class="branch"><h3>麻布十番店(魚BAR一歩)</h3><dl><div><dt>住所</dt><dd>港区麻布十番2-8-8エル麻布ビル302</dd></div><div><dt>アクセス</dt><dd>地下鉄 麻布十番駅</dd></div><div><dt>電話</dt><dd><a href="tel:0334575383">03-3457-5383</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AD%9ABAR%E4%B8%80%E6%AD%A9%20%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA%E5%BA%97%20%E6%B8%AF%E5%8C%BA%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA2-8-8%E3%82%A8%E3%83%AB%E9%BA%BB%E5%B8%83%E3%83%93%E3%83%AB302" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0334575383">電話をかける</a><a class="btn" href="https://s.tabelog.com/tokyo/A1307/A130702/13142433/" target="_blank" rel="noopener">食べログ</a></div></div><div class="branch"><h3>恵比寿店(魚BAR一歩)</h3><dl><div><dt>住所</dt><dd>渋谷区恵比寿1-22-10 カマスヤ2F</dd></div><div><dt>アクセス</dt><dd>JR、日比谷線 恵比寿駅</dd></div><div><dt>電話</dt><dd><a href="tel:0334458418">03-3445-8418</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AD%9ABAR%E4%B8%80%E6%AD%A9%20%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97%20%E6%B8%8B%E8%B0%B7%E5%8C%BA%E6%81%B5%E6%AF%94%E5%AF%BF1-22-10%20%E3%82%AB%E3%83%9E%E3%82%B9%E3%83%A42F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0334458418">電話をかける</a><a class="btn" href="https://s.tabelog.com/tokyo/A1303/A130302/13032678/" target="_blank" rel="noopener">食べログ</a></div></div><div class="branch"><h3>神保町店(中華厨房一歩)</h3><dl><div><dt>住所</dt><dd>東京都千代田区西神田2-2-1 東質ビル 1F</dd></div><div><dt>アクセス</dt><dd>神保町駅、水道橋駅</dd></div><div><dt>電話</dt><dd><a href="tel:05055904753">050-5590-4753</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E8%8F%AF%E5%8E%A8%E6%88%BF%E4%B8%80%E6%AD%A9%20%E7%A5%9E%E4%BF%9D%E7%94%BA%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E8%A5%BF%E7%A5%9E%E7%94%B02-2-1%20%E6%9D%B1%E8%B3%AA%E3%83%93%E3%83%AB%201F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:05055904753">電話をかける</a><a class="btn" href="https://s.tabelog.com/tokyo/A1310/A131003/13279175/" target="_blank" rel="noopener">食べログ</a></div></div></div>
+<h3 class="person">高44回 髙野将人</h3>
+<figure class="portrait"><img src="images/p08_04.jpg" width="605" height="807" alt="髙野さん" loading="lazy" decoding="async"><figcaption>髙野さん</figcaption></figure>
+<div class="body"><p>高44回の髙野将人さんは、証券会社での金融マン生活に別れを告げ、21年前に脱サラ。魚と日本酒の居酒屋「魚BAR 一歩」を開業されました。</p><p>現在は都内に恵比寿店、麻布十番店の2店舗、そして新たに神保町に中華ダイニング「中華厨房 一歩」を加えた計3店舗を展開されています。</p><p>お魚はどれも鮮度抜群かつ日本酒に合う美味しいものばかり。日本酒はレアなものから知る人ぞ知る蔵の銘酒まで、知識豊富なスタッフの方が丁寧にご案内してくださいます。</p><p>冬のおすすめは、あんこう鍋とあん肝。そして宮城の郷土料理「はらこ飯」も絶品です。</p></div>
+<p class="logo"><img src="images/p08_05.png" width="160" height="180" alt="魚BAR一歩 / 中華厨房一歩 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="kintaro">
+<header><p class="num">08</p><h2>お好み鉄板焼 金太郎</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p09_01.jpg" width="1143" height="857" alt="店内の金太郎の置物" loading="lazy" decoding="async"><figcaption>「おばんです！！」</figcaption></figure><figure><img src="images/p09_02.jpg" width="643" height="857" alt="特製金太郎焼" loading="lazy" decoding="async"></figure><figure><img src="images/p09_03.jpg" width="1143" height="857" alt="黒板メニュー" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都豊島区池袋2-16-3 池袋ハイツ 1F</dd></div><div><dt>アクセス</dt><dd>池袋駅西口から徒歩7分/C1出口から徒歩1分<br>西口Echikaの一番西の出口</dd></div><div><dt>電話</dt><dd><a href="tel:0339877778">03-3987-7778</a></dd></div><div><dt>Web</dt><dd><a class="url" href="http://www.kintaro-shusse.com/" target="_blank" rel="noopener">http://www.kintaro-shusse.com/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%8A%E5%A5%BD%E3%81%BF%E9%89%84%E6%9D%BF%E7%84%BC%20%E9%87%91%E5%A4%AA%E9%83%8E%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-16-3%20%E6%B1%A0%E8%A2%8B%E3%83%8F%E3%82%A4%E3%83%84%201F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0339877778">電話をかける</a><a class="btn" href="http://www.kintaro-shusse.com/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>塩竈出身の和田さんは、明るく気さくなお人柄。<br>お店を構えて10余年以上。<br>コロナ禍も、池袋はじめ多くの人たちに支えられ、ここまで続けてくることができました。</p><p>宮城出身が気軽に集える知る人ぞ知る隠れ家的お店。</p><p>看板メニューは、“特製金太郎焼”。<br>山芋がたっぷり入っていて、お酒のつまみにグッド！<br>黒板には、おすすめメニュー、いつも宮城ゆかりのメニューがあります</p><p>ビールはサッポロ・ヱビスです！</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p09_04.jpg" width="643" height="857" alt="真ん中が社長の和田信治さん（仙台育英高校出身）" loading="lazy" decoding="async"><figcaption>真ん中が社長の和田信治さん（仙台育英高校出身）</figcaption></figure><div><p class="from">和田さんより</p><p>おすすめは、ふわふわの食感がたまらないさつま揚げと日本酒との相性抜群のあじなめろうです。</p></div></aside>
+</article>
+<article class="shop" id="bunji">
+<header><p class="num">09</p><h2>三代目 文治</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p10_01.jpg" width="244" height="184" alt="テーブルに並んだ料理" loading="lazy" decoding="async"></figure><figure><img src="images/p10_02.jpg" width="268" height="154" alt="練り物" loading="lazy" decoding="async"></figure><figure><img src="images/p10_03.jpg" width="243" height="190" alt="日本酒を持つスタッフ" loading="lazy" decoding="async"></figure><figure><img src="images/p10_04.jpg" width="177" height="236" alt="店舗入口" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都千代田区有楽町1-6-3<br>日比谷頴川ビル B1F</dd></div><div><dt>アクセス</dt><dd>地下鉄日比谷線・千代田線 日比谷駅</dd></div><div><dt>電話</dt><dd><a href="tel:0355321251">03-5532-1251</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://www.oizumifoods.co.jp/bunji/" target="_blank" rel="noopener">https://www.oizumifoods.co.jp/bunji/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E4%BB%A3%E7%9B%AE%20%E6%96%87%E6%B2%BB%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E6%9C%89%E6%A5%BD%E7%94%BA1-6-3%20%E6%97%A5%E6%AF%94%E8%B0%B7%E9%A0%B4%E5%B7%9D%E3%83%93%E3%83%AB%20B1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0355321251">電話をかける</a><a class="btn" href="https://www.oizumifoods.co.jp/bunji/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>三代目文治では、宮城伝統の味と職人技を心ゆくまでご堪能いただけます。</p><p>宮城県塩釜市由来のおでんは、創業以来80年の歴史がある練り製品メーカー阿部善商店が長年培った独自の製法で編み出した逸品です。日高の昆布と牡蠣のエキスで毎朝一番出汁を取り炊いています。</p><p>仙台名物牛タン料理は発祥から60年。<br>熟練された職人が絶妙な手捌きで、最高の逸品を提供しています。</p><p>日本酒も東北の地酒を多数ご用意しております。</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p10_05.jpg" width="300" height="225" alt="人物写真" loading="lazy" decoding="async"></figure><div><p class="from">店長より</p><p>牛タン、塩釜おでんはアツアツで提供しております。是非ご来店ください。</p></div></aside>
+<p class="logo"><img src="images/p10_06.jpg" width="215" height="193" alt="三代目 文治 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="taruichi">
+<header><p class="num">10</p><h2>樽一 新宿本店</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p11_01.jpg" width="243" height="193" alt="宴会料理" loading="lazy" decoding="async"></figure><figure><img src="images/p11_02.jpg" width="238" height="205" alt="浦霞を手に" loading="lazy" decoding="async"></figure><figure><img src="images/p11_03.jpg" width="267" height="200" alt="日本酒とともに" loading="lazy" decoding="async"></figure><figure><img src="images/p11_04.jpg" width="219" height="255" alt="店舗入口の暖簾" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都新宿区歌舞伎町1-2-9<br>シタディーンセントラル新宿東京B1F</dd></div><div><dt>アクセス</dt><dd>地下鉄丸の内線 新宿三丁目駅</dd></div><div><dt>電話</dt><dd><a href="tel:0332089772">03-3208-9772</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://sinjyuku-taruichi.co.jp/" target="_blank" rel="noopener">https://sinjyuku-taruichi.co.jp/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%BD%E4%B8%80%20%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA1-2-9%20%E3%82%B7%E3%82%BF%E3%83%87%E3%82%A3%E3%83%BC%E3%83%B3%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E6%96%B0%E5%AE%BF%E6%9D%B1%E4%BA%ACB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0332089772">電話をかける</a><a class="btn" href="https://sinjyuku-taruichi.co.jp/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>樽一新宿本店は東京で初めて浦霞を取り扱ったお店です。浦霞の品ぞろえは日本一。そして三陸料理、鯨料理が名物です。</p><p>雄大な自然界で育った鯨食材が、いま見直されていますが、樽一は、失われつつある貴重な日本の食文化をこれからの世代に引き継ぎ、日本人の誇りをもって語り続けてくれるお店です。</p><p>生牡蠣、ホヤ料理、自家製笹かまぼこ、金華サバ、多数取り揃えています。最近は、気仙沼ホルモンやせり鍋が人気です。</p><p>当店の新名物「うなぎ料理」は関西風です。白焼きもご用意しており、お酒のアテにぴったりです。</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p11_05.jpg" width="304" height="220" alt="人物写真" loading="lazy" decoding="async"></figure><div><p class="from">店長より</p><p>浦霞の品揃えは日本一です。当店オリジナル品もございます。是非お試しください。</p></div></aside>
+<p class="logo"><img src="images/p11_06.jpg" width="222" height="241" alt="樽一 新宿本店 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="miyoshiya">
+<header><p class="num">11</p><h2>旬の魚と宮城の地酒 三好屋</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p12_01.jpg" width="256" height="192" alt="刺身" loading="lazy" decoding="async"></figure><figure><img src="images/p12_02.jpg" width="258" height="193" alt="お通しとビール" loading="lazy" decoding="async"></figure><figure><img src="images/p12_03.jpg" width="258" height="193" alt="カウンターと宮城の地酒" loading="lazy" decoding="async"></figure><figure><img src="images/p12_04.jpg" width="260" height="290" alt="夜の外観" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都豊島区長崎4-31-3</dd></div><div><dt>アクセス</dt><dd>西武池袋線 東長崎駅</dd></div><div><dt>電話</dt><dd><a href="tel:0359268797">03-5926-8797</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://tabelog.com/tokyo/A1321/A132101/13253680/" target="_blank" rel="noopener">https://tabelog.com/tokyo/A1321/A132101/13253680/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%AC%E3%81%AE%E9%AD%9A%E3%81%A8%E5%AE%AE%E5%9F%8E%E3%81%AE%E5%9C%B0%E9%85%92%20%E4%B8%89%E5%A5%BD%E5%B1%8B%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E9%95%B7%E5%B4%8E4-31-3" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0359268797">電話をかける</a><a class="btn" href="https://tabelog.com/tokyo/A1321/A132101/13253680/" target="_blank" rel="noopener">食べログ</a></div></div>
+<div class="body"><p>宮城県ゆかりのお店として紹介されている三好屋さん。</p><p>入口の扉を開けると、浩子（こうこ）ちゃんの笑顔と元気な声でお出迎え。</p><p>牡鹿生まれ女川育ちの母ちゃんの美味しい浜料理と宮城の地酒がいただけます。</p><p>お通しから始まって何から何まで、どれもが美味しく、宮城県人の我々をして「うん。この味！」となるような逸品ばかりです。</p><p>宮城県出身者だけでなく、地元の方にも愛されて、満員御礼の毎日。</p><p>「今は、すべてに感謝です。」という浩子ちゃんの言葉が、このお店のエッセンスのように感じます。<br>さぁ、三好屋さんへ！</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p12_05.jpg" width="281" height="204" alt="右が店主の浩子ちゃん" loading="lazy" decoding="async"><figcaption>右が店主の浩子ちゃん</figcaption></figure><div><p class="from">店主より</p><p>宮城の料理と地酒でおもてなしいたします。<br>お越しの際はご予約をお願いいたします。</p></div></aside>
+</article>
+<article class="shop" id="sapporo-lion">
+<header><p class="num">12</p><h2>サッポロライオン</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p13_01.jpg" width="220" height="201" alt="生ビール" loading="lazy" decoding="async"></figure><figure><img src="images/p13_02.jpg" width="218" height="218" alt="料理" loading="lazy" decoding="async"></figure><figure><img src="images/p13_03.jpg" width="236" height="191" alt="ビヤホールの店内" loading="lazy" decoding="async"></figure><figure><img src="images/p13_04.jpg" width="150" height="150" alt="入口" loading="lazy" decoding="async"></figure><figure><img src="images/p13_05.jpg" width="346" height="232" alt="店内での集合写真" loading="lazy" decoding="async"></figure></div>
+<div class="info"><p class="info-note">全国に約１７０店舗展開</p><p class="info-note">代表店舗：ビヤホールライオン銀座七丁目店</p><dl><div><dt>住所</dt><dd>東京都中央区銀座7－9－20 銀座ライオンビル 1F</dd></div><div><dt>アクセス</dt><dd>地下鉄銀座線 銀座駅</dd></div><div><dt>電話</dt><dd><a href="tel:0335712590">03-3571-2590</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://www.ginzalion.jp/" target="_blank" rel="noopener">https://www.ginzalion.jp/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A77%EF%BC%8D9%EF%BC%8D20%20%E9%8A%80%E5%BA%A7%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%93%E3%83%AB%201F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0335712590">電話をかける</a><a class="btn" href="https://www.ginzalion.jp/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>ビールといったら、“サッポロビール”♪。<br>二高といったら“サッポロビール”♪。</p><p>いつも二高グルメメンバーが事あるごとにお世話になっています。いつでもどこのお店でも変わらずに、抜群に美味しいビールと料理をいただけます。</p><p>また、各店舗の支配人はじめスタッフさんの気配り・ホスピタリティが素晴らしく、お店の作りも、各店工夫されていて、時間が経つのを忘れてしまいます。</p><p>恋人と、上司と部下と同僚と、家族と皆で行きたい“サッポロライオン”。</p></div>
+<div class="roster"><p class="from">サッポロビールファミリー</p><ul><li>高24 上條 努</li><li>高24 酒見 謙三</li><li>高29 岡崎 康志</li><li>高33 高橋 毅</li><li>高41 佐々木 学</li><li>高53 豊田 崇文</li></ul></div>
+<p class="logo"><img src="images/p13_06.png" width="70" height="71" alt="サッポロライオン ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="taikochaya">
+<header><p class="num">13</p><h2>おさかな本舗 たいこ茶屋</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p14_01.jpg" width="257" height="187" alt="マグロの解体ショー" loading="lazy" decoding="async"></figure><figure><img src="images/p14_02.jpg" width="197" height="206" alt="刺身の盛り合わせ" loading="lazy" decoding="async"></figure><figure><img src="images/p14_03.jpg" width="262" height="196" alt="マグロの柵を手に" loading="lazy" decoding="async"></figure><figure><img src="images/p14_04.jpg" width="178" height="238" alt="店舗入口" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都中央区日本橋馬喰町２丁目 ３−２<br>セントピアビル B1F</dd></div><div><dt>アクセス</dt><dd>JR、地下鉄 浅草橋駅</dd></div><div><dt>電話</dt><dd><a href="tel:0336398670">03-3639-8670</a></dd></div><div><dt>Web</dt><dd><a class="url" href="https://www.taikochaya.jp/" target="_blank" rel="noopener">https://www.taikochaya.jp/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%8A%E3%81%95%E3%81%8B%E3%81%AA%E6%9C%AC%E8%88%97%20%E3%81%9F%E3%81%84%E3%81%93%E8%8C%B6%E5%B1%8B%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B%E9%A6%AC%E5%96%B0%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%20%EF%BC%93%E2%88%92%EF%BC%92%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%94%E3%82%A2%E3%83%93%E3%83%AB%20B1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0336398670">電話をかける</a><a class="btn" href="https://www.taikochaya.jp/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<div class="body"><p>大将（店主）の嵯峨さんは、お店の近くの駅に出没する「ガッツおじさん」として有名です。</p><p>宮城県出身の大将と、若女将とで、お出迎え。今日も笑顔と美味しい魚で元気におもてなし。鳴らす太鼓に祈りを込めて、届け！震災復興の願い。</p><p>毎日築地から仕入れる新鮮なお刺身がいただけます。元気の良い「いらっしゃいませ～」から始まり、マグロの解体ショーや、マグロのセリ落とし、じゃんけん大会となかなか体験の出来ない密度の濃い時間を過ごせます。</p><p>大将は、メディアにも多数出演され、お店は、ドラマのロケ地にもなっているとか。</p><p>親しい人にも紹介したくなるお店です。</p></div>
+<aside class="comment"><figure class="portrait"><img src="images/p14_05.jpg" width="272" height="238" alt="大将の嵯峨さん" loading="lazy" decoding="async"><figcaption>大将の嵯峨さん</figcaption></figure><div><p class="from">大将より</p><p>お客様の喜ぶ笑顔が見たい！その一心でガッツ注入に日々取り組んでおります。</p></div></aside>
+<p class="logo"><img src="images/p14_06.jpg" width="273" height="94" alt="おさかな本舗 たいこ茶屋 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<article class="shop" id="yukun">
+<header><p class="num">14</p><h2>新橋 有薫酒蔵</h2></header>
+<div class="gallery" role="group" aria-label="写真（横にスクロールできます）"><figure><img src="images/p15_01.jpg" width="243" height="287" alt="仙台二高の居酒屋ノート" loading="lazy" decoding="async"></figure><figure><img src="images/p15_02.jpg" width="148" height="246" alt="店舗入口" loading="lazy" decoding="async"></figure></div>
+<div class="info"><dl><div><dt>住所</dt><dd>東京都港区新橋1-16-4 りそな新橋ビル B1F</dd></div><div><dt>アクセス</dt><dd>JR新橋駅</dd></div><div><dt>電話</dt><dd><a href="tel:0335089296">03-3508-9296</a></dd></div><div><dt>Web</dt><dd><a class="url" href="http://www.shinbashi-yukun.com/" target="_blank" rel="noopener">http://www.shinbashi-yukun.com/</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E6%A9%8B%20%E6%9C%89%E8%96%AB%E9%85%92%E8%94%B5%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%96%B0%E6%A9%8B1-16-4%20%E3%82%8A%E3%81%9D%E3%81%AA%E6%96%B0%E6%A9%8B%E3%83%93%E3%83%AB%20B1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0335089296">電話をかける</a><a class="btn" href="http://www.shinbashi-yukun.com/" target="_blank" rel="noopener">Webサイト</a></div></div>
+<figure class="map"><img src="images/p15_03.jpg" width="680" height="423" alt="アクセスマップ" loading="lazy" decoding="async"></figure>
+<div class="body"><p>食材は毎日九州から空輸し、新鮮素材を使った料理でおもてなしをしております。</p><p>手作りのさつま揚げやがめ煮やあご、夏のムツゴロウや初夏のエツ、冬の鯖のお刺身や赤なまこなど、珍しいお肴もご用意しております。</p><p>全国の高校の卒業生が思いや近況を綴るファイル（通称：居酒屋ノート）がズラリ！仙台二高は２冊目に突入しています。</p></div>
+<p class="logo"><img src="images/p15_04.jpg" width="231" height="110" alt="新橋 有薫酒蔵 ロゴ" loading="lazy" decoding="async"></p>
+</article>
+<section class="others" id="others">
+  <h2>他にも、素敵なお店がございます。</h2>
+  <ul><li><h3>北海亭</h3><p class="by">高27　紹介者：庄子</p><p>宮城県出身のオーナーがえりすぐりの海鮮が評判の居酒屋。季節ごとの鍋が絶品です。</p><dl><div><dt>住所</dt><dd>東京都新宿区新宿2-1-9ステラ新宿ビルB1F</dd></div><div><dt>連絡先</dt><dd><a href="tel:0353795560">03-5379-5560</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8C%97%E6%B5%B7%E4%BA%AD%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF2-1-9%E3%82%B9%E3%83%86%E3%83%A9%E6%96%B0%E5%AE%BF%E3%83%93%E3%83%ABB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0353795560">電話をかける</a></div></li><li><h3>レストランバーALMA</h3><p class="by">高29　紹介者：岡崎</p><p>こちらのCEO萱場さんは仙台出身で、宮城の食材を大事に使っています。クオリティも非常に高いです。</p><dl><div><dt>住所</dt><dd>東京都渋谷区東3-15-6百百代ビル1F</dd></div><div><dt>連絡先</dt><dd><a href="tel:0354685737">03-5468-5737</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E3%83%90%E3%83%BCALMA%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E6%9D%B13-15-6%E7%99%BE%E7%99%BE%E4%BB%A3%E3%83%93%E3%83%AB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0354685737">電話をかける</a></div></li><li><h3>喜助 東京恵比寿店</h3><p class="by">高29　紹介者：岡崎</p><p>太助は牛タン発祥のお店ですが、喜助は牛タンを全国に広げたお店です。</p><dl><div><dt>住所</dt><dd>東京都渋谷区恵比寿4-20-4 恵比寿ガーデンプレイス グラススクエアB1F</dd></div><div><dt>連絡先</dt><dd><a href="tel:0364557765">03-6455-7765</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%96%9C%E5%8A%A9%20%E6%9D%B1%E4%BA%AC%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E6%81%B5%E6%AF%94%E5%AF%BF4-20-4%20%E6%81%B5%E6%AF%94%E5%AF%BF%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9%20%E3%82%B0%E3%83%A9%E3%82%B9%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2B1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0364557765">電話をかける</a></div></li><li><h3>炭火屋おだづもっこ</h3><p class="by">高31　紹介者：小堀</p><p>「サンドウィッチマンの東北酒場で逢いましょう」で紹介されました。</p><dl><div><dt>住所</dt><dd>東京都杉並区高円寺北1-3-2 ロングヒル高円寺ビル1F</dd></div><div><dt>連絡先</dt><dd><a href="tel:05055946969">050-5594-6969</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%82%AD%E7%81%AB%E5%B1%8B%E3%81%8A%E3%81%A0%E3%81%A5%E3%82%82%E3%81%A3%E3%81%93%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%89%E4%B8%A6%E5%8C%BA%E9%AB%98%E5%86%86%E5%AF%BA%E5%8C%971-3-2%20%E3%83%AD%E3%83%B3%E3%82%B0%E3%83%92%E3%83%AB%E9%AB%98%E5%86%86%E5%AF%BA%E3%83%93%E3%83%AB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:05055946969">電話をかける</a></div></li><li><h3>和彩 かくや</h3><p class="by">高34　紹介者：森田</p><p>たまたま同期で集まったお店の店長が二高出身でした。</p><dl><div><dt>住所</dt><dd>東京都千代田区飯田橋2-12-10 日高ビル1F</dd></div><div><dt>連絡先</dt><dd><a href="tel:05034761393">050-3476-1393</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%92%8C%E5%BD%A9%20%E3%81%8B%E3%81%8F%E3%82%84%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E9%A3%AF%E7%94%B0%E6%A9%8B2-12-10%20%E6%97%A5%E9%AB%98%E3%83%93%E3%83%AB1F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:05034761393">電話をかける</a></div></li><li><h3>HONMIDO</h3><p class="by">高51　紹介者：昆野</p><p>菓匠三全の新ブランドです。</p><dl><div><dt>住所</dt><dd>東京都中央区銀座6-10-1 GINZASIXB2F</dd></div><div><dt>連絡先</dt><dd><a href="tel:0362746131">03-6274-6131</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=HONMIDO%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A76-10-1%20GINZASIXB2F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0362746131">電話をかける</a></div></li><li><h3>三陸港町酒場 女川男</h3><p class="by">高51　紹介者：矢野</p><p>東京で新鮮な牡蠣を食べるならここ。産地別で堪能できます。</p><dl><div><dt>住所</dt><dd>東京都江東区富岡1-24-6</dd></div><div><dt>連絡先</dt><dd><a href="tel:0356465250">03-5646-5250</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E9%99%B8%E6%B8%AF%E7%94%BA%E9%85%92%E5%A0%B4%20%E5%A5%B3%E5%B7%9D%E7%94%B7%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B1%9F%E6%9D%B1%E5%8C%BA%E5%AF%8C%E5%B2%A11-24-6" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0356465250">電話をかける</a></div></li><li><h3>CAFÉ KALIZ</h3><p class="by">高51　紹介者：矢野</p><p>麻布十番にある仙台藩下屋敷跡地にあり、麻布の地下水を使っています。</p><dl><div><dt>住所</dt><dd>東京都港区南麻布1-4-22 サライ南麻布１F</dd></div><div><dt>連絡先</dt><dd><a href="tel:0334542727">03-3454-2727</a></dd></div></dl><div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=CAF%C3%89%20KALIZ%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%BA%BB%E5%B8%831-4-22%20%E3%82%B5%E3%83%A9%E3%82%A4%E5%8D%97%E9%BA%BB%E5%B8%83%EF%BC%91F" target="_blank" rel="noopener">地図を開く</a><a class="btn" href="tel:0334542727">電話をかける</a></div></li></ul>
+</section>
+<section class="closing">
+  <p>ぜひ、引き続き、皆さんがご存知の素敵なお店を教えてください。</p><p>どうぞよろしくお願い申し上げます。</p>
+  <p class="sign">仙台二高グルメマップ制作チーム一同</p>
+</section>
+</main>
+<a class="totoc" href="#toc">目次</a>
+</body>
+</html>
